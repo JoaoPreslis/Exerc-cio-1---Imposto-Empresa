@@ -6,24 +6,46 @@ import java.util.Scanner;
 public class Mavenproject1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Imposto!");
         try (Scanner entrada = new Scanner(System.in)) {
             
-            Double taxa = 0.0, valor = 0.0;
-            System.out.println("Informe imposto sobre o produto: ");
-            
-            
-            taxa = entrada.nextDouble();
+            Double taxa1 = 0.0, valor1 = 0.0;
+            System.out.println("Informe a taxa de imposto MG : ");
+            taxa1 = entrada.nextDouble();
             System.out.println("Valor: ");
+            valor1 = entrada.nextDouble();
+            Double taxaMG = valor1 + ( taxa1/100 ) * valor1;
             
+            System.out.println("\nResultado: " + taxaMG);
             
-            valor = entrada.nextDouble();
-            Double taxaDeImposto = valor + ( taxa/100 ) * valor;
+            Double taxa2 = 0.0, valor2 = 0.0;
+            System.out.println("Informe a taxa de imposto SP: ");
+            taxa2 = entrada.nextDouble();
+            System.out.println("Valor: ");
+            valor2 = entrada.nextDouble();
+            Double taxaSP = valor2 + ( taxa2/100 ) * valor2;
             
+            System.out.println("\nResultado: " + taxaSP);
             
-            System.out.println("\nResultado: " + taxaDeImposto);
+            Double taxa3 = 0.0, valor3 = 0.0;
+            System.out.println("Informe a taxa de imposto RJ: ");
+            taxa3 = entrada.nextDouble();
+            System.out.println("Valor: ");
+            valor3 = entrada.nextDouble();
+            Double taxaRJ = valor3 + ( taxa3/100 ) * valor3;
+            
+            System.out.println("\nResultado: " + taxaRJ);
+            
+            Double taxa4 = 0.0, valor4 = 0.0;
+            System.out.println("Informe a taxa de imposto MS: ");
+            taxa4 = entrada.nextDouble();
+            System.out.println("Valor: ");
+            valor4 = entrada.nextDouble();
+            Double taxaMS = valor4 + ( taxa4/100 ) * valor4;
+            
+            System.out.println("\nResultado: " + taxaMS);
+            
+            entrada.close();
         }
-     
-       
     }
 }
